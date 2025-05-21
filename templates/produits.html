@@ -1,0 +1,25 @@
+<h2>Nos Produits</h2>
+
+<div class="product-card">
+    <img src="{{ url_for('static', filename='images/casserole.jpg') }}" alt="Casserole">
+    <p>Casserole</p>
+    <p>Prix : 10€</p>
+    <form action="{{ url_for('ajouter_au_panier') }}" method="post">
+        <input type="hidden" name="nom" value="Casserole">
+        <input type="hidden" name="prix" value="10">
+        <button type="submit">Ajouter au panier</button>
+    </form>
+</div>
+
+<div class="product-card">
+    <img src="{{ url_for('static', filename='images/voiture.jpg') }}" alt="Voiture">
+    <p>Voiture</p>
+    <p>Prix : 15€</p>
+    <form action="{{ url_for('ajouter_au_panier') }}" method="post">
+        <input type="hidden" name="nom" value="Voiture">
+        <input type="hidden" name="prix" value="15">
+        <button type="submit">Ajouter au panier</button>
+    </form>
+</div>
+
+<a href="{{ url_for('panier') }}">Voir le panier</a>

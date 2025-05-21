@@ -1,0 +1,14 @@
+<h2>Votre panier</h2>
+
+{% if panier %}
+    <ul>
+        {% for item in panier %}
+            <li>{{ item.nom }} - {{ item.prix }} €</li>
+        {% endfor %}
+    </ul>
+    <p><strong>Total :</strong> {{ total }} €</p>
+{% else %}
+    <p>Votre panier est vide.</p>
+{% endif %}
+
+<a href="{{ url_for('produits') }}">Retour aux produits</a>
